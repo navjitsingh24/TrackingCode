@@ -36,7 +36,7 @@ process.tpClusterProducer  = process.tpClusterProducerDefault.clone()
 # Input source
 process.source = cms.Source("PoolSource",
     duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
-    fileNames =  cms.untracked.vstring('file:fileout_step3_recodebug.root')
+    fileNames =  cms.untracked.vstring('file:/eos/cms/store/group/phys_heavyions_ops/Tracking2022/step3/fileout_step3_recodebug_MB_2kevents_Baseline.root')
 )
 ### centrality ###
 process.load("RecoHI.HiCentralityAlgos.CentralityBin_cfi") 
@@ -60,11 +60,11 @@ process.HITrackCorrections.applyVertexZCut = False
 process.HITrackCorrections.doVtxReweighting = False
 process.HITrackCorrections.doCaloMatched = False
 # cut values
-process.HITrackCorrections.dxyErrMax = 3.0
-process.HITrackCorrections.dzErrMax = 3.0
-process.HITrackCorrections.ptErrMax = 0.1
-process.HITrackCorrections.nhitsMin = 11
-process.HITrackCorrections.chi2nMax = 0.18
+process.HITrackCorrections.dxyErrMax = 999999.0
+process.HITrackCorrections.dzErrMax = 999999.0
+process.HITrackCorrections.ptErrMax = 999999.0
+process.HITrackCorrections.nhitsMin = 0.0
+process.HITrackCorrections.chi2nMax = 999999.0
 process.HITrackCorrections.reso = 0.5
 
 #process.HITrackCorrections.crossSection = 1.0 #1.0 is no reweigh
